@@ -1,0 +1,156 @@
+% UConn presentation theme for beamer
+% Jonas Saggese Banhos <jsbanhos@gmail.com> 2021
+% https://github.com/jonasbanhos/UConn_Beamer_Theme.git
+%
+% Adapted from UH Manoa presentation theme for beamer
+% Jeff Delmerico <jeffdelmerico@gmail.com> 2012
+% https://github.com/jeffdelmerico/UH_Beamer_Theme.git
+%
+% Adapted from ZBH theme by:
+% Sascha Steinbiss <steinbiss@zbh.uni-hamburg.de>
+% https://github.com/satta/zbh-beamer-theme.git
+
+\usepackage{graphicx}
+
+%\ProvidesPackage{beamerthemeUH}[2013/10/25 UH Beamer Theme]
+\ProvidesPackage{beamerthemeUConn}[2021/09/02 UConn Beamer Theme]
+\def\backgroundfile{UConn-bg}
+\def\plainbgfile{UConn-bg}
+\newcommand\titlepic{UConn-logo}
+
+%\definecolor{UHGreen}{RGB}{2,71,49}
+\definecolor{UConnGrey}{RGB}{124,135,142}
+\definecolor{UConnBlue}{RGB}{0,14,47}
+\definecolor{UConnLightBlue}{RGB}{164,200,225}
+\definecolor{White}{RGB}{255,255,255}
+\newlength{\@headerdist}
+\setlength{\@headerdist}{5mm}
+
+
+\newcommand{\email}{
+\url{jonas.saggese_banhos@uconn.edu}
+
+}
+
+
+
+\newcommand{\address}{
+	Department of Mechanical Engineering
+	Computational Fluid Dynamics Group
+	
+}
+
+\mode<presentation>
+
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{date}{size=\large}
+\setbeamerfont{example text}{series=\bfseries}
+\setbeamerfont{section}{series=\bfseries}
+\setbeamercolor{structure}{fg=UConnBlue}
+\setbeamercolor{title}{fg=black}
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{block title alerted}{series=\bfseries}
+\setbeamercolor{block title}{bg=UConnGrey,fg=UConnBlue!10!white}
+\setbeamercolor{block body}{bg=UConnBlue!12!white}
+\setbeamercolor{block title example}{bg=UConnBlue!100!white,fg=UConnBlue!10!white}
+\setbeamercolor{block body example}{bg=UConnBlue!12!white}
+\setbeamercolor{block title alerted}{bg=red!60!white,fg=black}
+\setbeamercolor{block body alerted}{bg=red!10!white}
+
+% disable navigation symbols 
+\setbeamertemplate{navigation symbols}{}
+
+% frame
+\setbeamercolor{frametitle}{fg=UConnBlue}
+\setbeamerfont{frametitle}{series=\mdseries,size=\Large}
+\setbeamerfont{framesubtitle}{series=\mdseries,size=\large}
+
+\setbeamertemplate{frametitle}
+{
+  \ifbeamer@plainframe
+  \else
+  	\vspace{0.5cm}
+    \textbf{\insertframetitle}
+    \vspace{.25cm}
+  \fi
+}
+
+% headline
+\setbeamercolor{headline}{fg=white}
+\setbeamertemplate{headline}{
+	\ifbeamer@plainframe
+	\else
+    	\vspace{8mm}
+    	\leavevmode\tiny%
+    	\hspace*{9.15cm}
+	   	\normalsize
+	\fi
+}
+
+% title page with UConn image
+\setbeamertemplate{title page}{
+  \textbf{\LARGE{\inserttitle}}
+
+  \textbf{\large{\insertsubtitle}}
+  \vfill
+  \begin{columns}
+  \begin{column}{.45\textwidth}
+	\textbf{\insertauthor}\\[3mm]
+	\scriptsize
+    \address
+	\vspace*{0.25cm}
+	\insertshortinstitute
+	\vspace*{0.25cm}
+	\insertshortdate
+  \end{column}
+  \begin{column}{.45\textwidth}
+	\hfill\includegraphics[height=5cm,width=\linewidth,keepaspectratio]{\titlepic}
+  \end{column}
+  \end{columns}
+  \normalsize
+  \setbeamertemplate{footline}{}
+}
+
+% footer with name, date and page numbers
+\setbeamercolor{footline}{fg=White}
+\setbeamertemplate{footline}{
+  \ifbeamer@plainframe
+  \else
+    \leavevmode\tiny%
+    \hspace*{5.0mm}%
+    \makebox[4.4cm][l]{\insertauthor}%
+    %\makebox[3cm][c]{\insertdate}%
+    \makebox[3cm][c]{\email}%
+	  \hfill
+	  \ifx\insertsection\empty
+	  \else
+    		\insertsection
+	  	\fi
+	  	\ifx\insertsubsection\empty
+	  	\else
+	    		:\insertsubsection
+	  	\fi
+	 	\ifx\insertsubsubsection\empty
+	  	\else
+	    		:\insertsubsubsection
+	  	\fi
+      	\hfill\insertframenumber/\inserttotalframenumber\hspace{5mm}%
+    \vspace{1.5mm}%
+  \fi
+}
+
+% use UConn slide layout template as background image
+\setbeamertemplate{background} {
+	\ifnum\thepage=1\relax%
+		\includegraphics[width=\paperwidth,height=\paperheight]{\plainbgfile}%
+	\else%
+  		\ifbeamer@plainframe%
+  	%\makebox[\textwidth]{\raisebox{0.675cm}[0pt][0pt]{\includegraphics[width=\paperwidth,height=\paperheight]{\plainbgfile}}}
+  		\else%
+    		\includegraphics[width=\paperwidth,height=\paperheight]{\backgroundfile}%
+  		\fi%
+	\fi%
+}
+
+\mode
+<all>
