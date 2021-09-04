@@ -3,6 +3,7 @@ UConn_Beamer_Theme
 Author: Jonas Saggese Banhos <<jsbanhos@gmail.com>>
 
 Theme and examples adapted from: Jeff Delmerico <<jad4@hawaii.edu>>
+
 Previous reference, adapted from: Sascha Steinbiss <<steinbiss@zbh.uni-hamburg.de>> and LIM Lian Tze <<liantze@gmail.com>>, respectively.  
 
 Theme for LaTeX Beamer presentations based on University UConn's logos and color scheme available at: https://brand.uconn.edu/wordmarks-assets/wordmark-and-logos/. 
@@ -13,13 +14,17 @@ These instructions assume an Ubuntu system with an installation LaTeX with Beame
 Master slide "UConn-bg.pdf" color scheme
 ========================================
 *It can be modified to fit your university's color scheme
+
 *Top blue bar across slide: 960 x 80 px
+
 *Bottom blue bar across slide: 960 x 40 px
+
 *UConn's "word" logo at the top-right of page
+
 *Note: You can use program "Inkscape" at <https://inkscape.org/> to modify your slide and save it as ".pdf"
 
-Logo "UConn-logo.png" size
-==========================
+Logo size
+=========
 Logo used is 125 x 125 px
 Note: You can use program "Inkscape" at <https://inkscape.org/> to modify your logo
 
