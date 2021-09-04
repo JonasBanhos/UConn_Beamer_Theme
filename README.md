@@ -1,2 +1,2 @@
 # UConn_Beamer_Theme
-Beamer (LaTex) Template. University of Connecticut Layout
+Beamer (LaTeX) Template. University of Connecticut Layout
